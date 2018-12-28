@@ -6,11 +6,10 @@
     <parent>
         <groupId>com.ugarit</groupId>
         <artifactId>ejb-parent</artifactId>
-        <version>1.2</version>
+        <version>1.5</version>
     </parent>
 
     <artifactId>ejb-service</artifactId>
-    <version>1.2</version>
     <packaging>ejb</packaging>
     <name>ejb-service</name>
 

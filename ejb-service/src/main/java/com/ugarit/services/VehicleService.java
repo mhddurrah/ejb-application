@@ -1,6 +1,7 @@
 package com.ugarit.services;
 
 
+import com.ugarit.persistence.entities.Request;
 import com.ugarit.persistence.entities.Vehicle;
 import com.ugarit.util.PersistenceUtils;
 
@@ -9,6 +10,7 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
+import java.util.Date;
 import java.util.List;
 
 @Named
@@ -28,4 +30,11 @@ public class VehicleService {
     }
 
 
+    public Vehicle addVehicle(Vehicle vehicle) {
+        EntityManager entityManager = PersistenceUtils.getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(vehicle);
+        entityManager.getTransaction().commit();
+        return vehicle;
+    }
 }

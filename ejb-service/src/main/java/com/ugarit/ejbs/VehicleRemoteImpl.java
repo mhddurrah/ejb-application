@@ -6,17 +6,15 @@ import com.ugarit.persistence.entities.Vehicle;
 import com.ugarit.services.VehicleService;
 
 import javax.annotation.PostConstruct;
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
 import java.util.List;
 
 @Stateless(name = "vehicle")
+@Interceptors(MessageLogger.class)
 public class VehicleRemoteImpl implements VehicleRemote {
 
     private VehicleService vehicleService;
-
-    @EJB
-    private MessageEJB messageEJB;
 
     @PostConstruct
     public void init() {
@@ -25,19 +23,21 @@ public class VehicleRemoteImpl implements VehicleRemote {
 
     @Override
     public Vehicle getVehicle(Long id) {
-        messageEJB.logMessage(ServiceCall.from("getVehicle", new Object[]{id}, System.currentTimeMillis()));
         return vehicleService.getVehicles().get(0);
     }
 
     @Override
     public List<Vehicle> getVehicles() {
-        messageEJB.logMessage(ServiceCall.from("getVehicles", new Object[]{}, System.currentTimeMillis()));
-
         return vehicleService.getVehicles();
     }
 
     @Override
     public void deleteVehicle(Long id) {
         vehicleService.deleteVehicle(id);
+    }
+
+    @Override
+    public Vehicle addVehicle(Vehicle vehicle) {
+        return vehicleService.addVehicle(vehicle);
     }
 }

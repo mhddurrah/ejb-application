@@ -1,24 +1,24 @@
 package com.ugarit.ejbs;
 
-
 import com.ugarit.persistence.entities.Request;
 import com.ugarit.util.PersistenceUtils;
 
-import javax.ejb.Asynchronous;
-import javax.ejb.Stateless;
+import javax.interceptor.AroundInvoke;
+import javax.interceptor.InvocationContext;
 import javax.persistence.EntityManager;
+import java.util.Date;
 
-@Stateless
-public class MessageEJB {
+public class MessageLogger {
 
-    @Asynchronous
-    public void logMessage(ServiceCall serviceCall) {
+    @AroundInvoke
+    public Object logMessage(InvocationContext invocationContext) throws Exception {
         EntityManager entityManager = PersistenceUtils.getEntityManager();
         entityManager.getTransaction().begin();
         Request request = new Request();
-        request.setMethodName(serviceCall.getMethodName());
-        request.setTime(serviceCall.getTime());
+        request.setMethodName(invocationContext.getMethod().getName());
+        request.setTime(new Date());
         entityManager.persist(request);
         entityManager.getTransaction().commit();
+        return invocationContext.proceed();
     }
 }

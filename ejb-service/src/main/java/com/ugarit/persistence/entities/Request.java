@@ -1,6 +1,7 @@
 package com.ugarit.persistence.entities;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "request")
@@ -14,7 +15,8 @@ public class Request {
     private String methodName;
 
     @Column
-    private long time;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date time;
 
     @Column
     private String result;
@@ -35,11 +37,11 @@ public class Request {
         this.methodName = methodName;
     }
 
-    public long getTime() {
+    public Date getTime() {
         return time;
     }
 
-    public void setTime(long time) {
+    public void setTime(Date time) {
         this.time = time;
     }
 
