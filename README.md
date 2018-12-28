@@ -6,7 +6,11 @@ Separated Deployment of an EJB application with Hibernate, check client here: ht
 Build and Usage:
 
 cd ejb-service
+
 mvn clean install -U
+
 mvn ejb:ejb package deploy
-cd ..
+
+cd .. (or cd.. in Windows :D )
+
 mvn ear:generate-application-xml package deploy
