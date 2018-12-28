@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.ugarit</groupId>
+        <groupId>com.ejbjsf</groupId>
         <artifactId>ejb-parent</artifactId>
         <version>1.5</version>
     </parent>
@@ -85,8 +85,8 @@
                         <generateClient>true</generateClient>
                         <clientIncludes>
                             <!-- this will include all files and directories under com/foo/bar -->
-                            <clientInclude>com/ugarit/interfaces/**</clientInclude>
-                            <clientInclude>com/ugarit/persistence/**</clientInclude>
+                            <clientInclude>com/ejbjsf/interfaces/**</clientInclude>
+                            <clientInclude>com/ejbjsf/persistence/**</clientInclude>
                         </clientIncludes>
                     </configuration>
                 </plugin>

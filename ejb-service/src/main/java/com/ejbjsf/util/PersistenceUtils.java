@@ -1,4 +1,4 @@
-package com.ugarit.util;
+package com.ejbjsf.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

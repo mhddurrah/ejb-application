@@ -1,4 +1,4 @@
-package com.ugarit.persistence.entities;
+package com.ejbjsf.persistence.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;

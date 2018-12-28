@@ -1,16 +1,12 @@
-package com.ugarit.services;
+package com.ejbjsf.services;
 
 
-import com.ugarit.persistence.entities.Request;
-import com.ugarit.persistence.entities.Vehicle;
-import com.ugarit.util.PersistenceUtils;
+import com.ejbjsf.persistence.entities.Vehicle;
+import com.ejbjsf.util.PersistenceUtils;
 
 import javax.enterprise.inject.Default;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceContextType;
-import java.util.Date;
 import java.util.List;
 
 @Named

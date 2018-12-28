@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.ugarit</groupId>
+        <groupId>com.ejbjsf</groupId>
         <artifactId>ejb-parent</artifactId>
         <version>1.5</version>
     </parent>
@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.ugarit</groupId>
+            <groupId>com.ejbjsf</groupId>
             <artifactId>ejb-service</artifactId>
             <version>${project.parent.version}</version>
             <type>ejb</type>
@@ -32,7 +32,7 @@
                     <configuration>
                         <modules>
                             <ejbModule>
-                                <groupId>com.ugarit</groupId>
+                                <groupId>com.ejbjsf</groupId>
                                 <artifactId>ejb-service</artifactId>
                             </ejbModule>
                         </modules>

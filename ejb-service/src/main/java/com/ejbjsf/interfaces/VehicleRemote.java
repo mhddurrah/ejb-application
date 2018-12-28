@@ -1,6 +1,6 @@
-package com.ugarit.interfaces;
+package com.ejbjsf.interfaces;
 
-import com.ugarit.persistence.entities.Vehicle;
+import com.ejbjsf.persistence.entities.Vehicle;
 
 import javax.ejb.Remote;
 import java.util.List;

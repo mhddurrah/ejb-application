@@ -1,9 +1,9 @@
-package com.ugarit.ejbs;
+package com.ejbjsf.ejbs;
 
 
-import com.ugarit.interfaces.VehicleRemote;
-import com.ugarit.persistence.entities.Vehicle;
-import com.ugarit.services.VehicleService;
+import com.ejbjsf.interfaces.VehicleRemote;
+import com.ejbjsf.persistence.entities.Vehicle;
+import com.ejbjsf.services.VehicleService;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;

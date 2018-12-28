@@ -1,7 +1,7 @@
-package com.ugarit.ejbs;
+package com.ejbjsf.ejbs;
 
-import com.ugarit.persistence.entities.Request;
-import com.ugarit.util.PersistenceUtils;
+import com.ejbjsf.persistence.entities.Request;
+import com.ejbjsf.util.PersistenceUtils;
 
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.InvocationContext;
