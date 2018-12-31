@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.ejbjsf</groupId>
         <artifactId>ejb-parent</artifactId>
-        <version>1.5</version>
+        <version>1.6</version>
     </parent>
 
     <artifactId>ear-application</artifactId>

@@ -13,6 +13,6 @@ public interface VehicleRemote {
 
     void deleteVehicle(Long id);
 
-    Vehicle addVehicle(Vehicle vehicle);
+    Vehicle addVehicle(Vehicle vehicle) throws DuplicateLicenceException;
 
 }
